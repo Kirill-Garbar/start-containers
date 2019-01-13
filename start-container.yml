@@ -1,0 +1,7 @@
+---
+- name: Service in docker-compose
+  hosts: tag_reddit-monitoring
+  become: true
+  tasks:
+    - name: Start a container with a command
+      command: docker start otus_reddit_{{ service }}_1
